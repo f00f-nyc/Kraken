@@ -122,7 +122,7 @@ namespace kraken.src.kraken.segments
 
                 this.TweenNode.InterpolateProperty(
                     this.Node,
-                    "rotation_degrees:z",
+                    "rotation_degrees:x",
                     animation.StartRotationZ,
                     animation.EndRotationZ,
                     duration,

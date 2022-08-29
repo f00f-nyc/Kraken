@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://src/kraken/tentacle.cs" type="Script" id=1]
 
@@ -81,6 +81,13 @@ radial_segments = 32
 radius = 0.5
 mid_height = 0.1
 radial_segments = 32
+
+[sub_resource type="CylinderMesh" id=17]
+top_radius = 1.4
+bottom_radius = 1.4
+height = 1.0
+radial_segments = 32
+rings = 1
 
 [node name="Spatial" type="Spatial"]
 
@@ -189,6 +196,12 @@ material/0 = null
 
 [node name="tween_06" type="Tween" parent="tentacle/segment_01/segment_02/segment_03/segment_04/segment_05"]
 
+[node name="between_nodes" type="MeshInstance" parent="tentacle/segment_01/segment_02/segment_03/segment_04/segment_05"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.2 )
+visible = false
+mesh = SubResource( 17 )
+material/0 = null
+
 [node name="tween_05" type="Tween" parent="tentacle/segment_01/segment_02/segment_03/segment_04"]
 
 [node name="tween_04" type="Tween" parent="tentacle/segment_01/segment_02/segment_03"]
@@ -200,7 +213,7 @@ material/0 = null
 [node name="tween_01" type="Tween" parent="tentacle"]
 
 [node name="ClippedCamera" type="ClippedCamera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.995676, -0.0928919, 0, 0.0928919, 0.995676, -2.06112, 1.78365, 8.76737 )
+transform = Transform( 0.538252, -0.0515163, 0.841208, 0.0609062, 0.997898, 0.0221409, -0.84058, 0.0393174, 0.540258, 17.7276, 6.71033, 11.6408 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89847, 1.40718, 2.16207 )
